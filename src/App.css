@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 * {
     margin: 0;
@@ -7,14 +7,14 @@
 }
 
 body {
-    background-color: #FFEAA7;
-    font-family: "Architects Daughter", sans-serif;
+    background-color: #2596be;
+    font-family: "Montserrat", sans-serif;
     text-align: center;
 }
 
 .todolist {
     margin: 50px auto;
-    padding: 16px;
+    padding: 24px;
     min-height: 580px;
     max-width: 300px;
     background-color: #f1f5f8;
@@ -33,7 +33,7 @@ body {
 .heading h1 {
     width: 60%;
     margin-top: 30px;
-    background-color: #fdc66e;
+    background-color: #1DA5D4;
     border-radius: 10px;
     border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
     padding: 0.2rem 1.2rem;
@@ -46,9 +46,9 @@ body {
 
 .todolist input {  
     border: 0;
-    border-bottom: 3px dashed #fdcb6e;
+    border-bottom: 3px dashed #1DA5D4;
     background-color: transparent;
-    font-family: "Architects Daughter", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.3rem;
     padding: 10px 15px;
     width: 70%;
@@ -60,7 +60,7 @@ body {
     border: 3px solid hsl(198, 1%, 29%);
     border-radius: 8px;
     padding: 10px 15px;
-    font-family: "Architects Daughter", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.9rem;
 }
 

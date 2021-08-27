@@ -1,87 +1,54 @@
-import React, {Component} from 'react';
-import { useState } from 'react';
-import './App.css'
-class App extends Component{
-  constructor(props){
-    super(props);
+import React, { useState } from 'react';
+import TodoItem from "./components/ItemX";
+import './App.css';
+import ItemX from './components/ItemX';
 
-    this.state={
-      newItem:"",
-      list:[]
+function App() {
+    const [input, setInput] = useState("");
+    const [items, setItems] = useState([]);
+
+    function addItem(event) {
+        setItems(prevData => {
+            return [...prevData, input];
+        });
+        
+        setInput("");
     }
-  }
 
-  updateInput(key,value){
-    //update react state
-    this.setState({
-      [key]:value
-    });
-  }
-  addItem(){
-    //create item with unique id
-    const newItem={
-      id: 1+Math.random(),
-      value: this.state.newItem.slice()
+    function removeItem(id) {
+        setItems(prevData => {
+            return prevData.filter((item, index) => {
+                return index !== id;
+            })
+        });
+    }
 
-    };
-    //copy of current list of items
+    return (
+      <div className="todolist">
+          <div className="heading">
+              <h1 className="title">To-do</h1>
+          </div>
+              <input
+                  type="text"
+                  value={input}
+                  onChange={(event) => {setInput(event.target.value)}}
+              />
+              <button onClick={addItem}>Add</button>
 
-     const list=[...this.state.list];
-
-     //add new item
-     list.push(newItem)
-
-     //update state with new list and reset
-
-     this.setState({
-       list,
-       newItem:""
-     })
-
-  }
-  deleteItem(id){
-    //copy current list of items
-    const list = [...this.state.list];
-    //filter deleted item 
-    const updatedList = list.filter(item => item.id !== id);
-
-    this.setState({ list: updatedList});
-  }
-  render(){
-    return(
-      <div className="App">
-        <div>
-          Add an Item...
-          <br/>
-          <input
-            type="text"
-            placeholder="Type an item here..."
-            value={this.state.newItem}
-            onChange={e => this.updateInput("newItem", e.target.value)}
-          />
-          <button 
-            onClick={() => this.addItem()}
-          >
-            Add
-          </button>
-          <br/>
-          <ul>
-            {this.state.list.map(item => {
-              return(
-                <li key={item.id}>
-                  {item.value}
-                  <button
-                    onClick={() => this.deleteItem(item.id)}
-                  >
-                    X
-                  </button>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
+          <div className="items">
+            <ul>
+                {items.map((item, index) => (
+                    <ItemX
+                        key={index}
+                        id={index}
+                        item={item}
+                        onCheck={removeItem}
+                    />
+                ))}
+            </ul>
+          </div>
       </div>
     );
-  }
 }
+
 export default App;
