@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
-import TodoItem from "./components/ItemX";
 import './App.css';
 import ItemX from './components/ItemX';
+import ParticlesBg from 'particles-bg'
 
 function App() {
     const [input, setInput] = useState("");
     const [items, setItems] = useState([]);
 
     function addItem(event) {
+        if(input!==""){
         setItems(prevData => {
             return [...prevData, input];
         });
         
         setInput("");
     }
+}
 
     function removeItem(id) {
         setItems(prevData => {
@@ -47,7 +49,10 @@ function App() {
                 ))}
             </ul>
           </div>
+          <ParticlesBg type="fountain" bg={true} color="#494a4b"/>
+
       </div>
+      
     );
 }
 
