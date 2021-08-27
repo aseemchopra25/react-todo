@@ -26,7 +26,7 @@ function App() {
     }
 
     return (
-      <div className="todolist">
+      <div className="to-do-list">
           <div className="heading">
               <h1 className="title">To-do</h1>
           </div>
