@@ -49,7 +49,7 @@ function App() {
                 ))}
             </ul>
           </div>
-          <ParticlesBg type="fountain" bg={true} color="#494a4b"/>
+          <ParticlesBg type="square" bg={true} color="#494a4b"/>
 
       </div>
       
