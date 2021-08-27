@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
 
 body {
     background-color: #2596be;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Architects Daughter", sans-serif;
     text-align: center;
 }
 
@@ -48,7 +48,7 @@ body {
     border: 0;
     border-bottom: 3px dashed #1DA5D4;
     background-color: transparent;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Architects Daughter", sans-serif;
     font-size: 1.3rem;
     padding: 10px 15px;
     width: 70%;
@@ -60,7 +60,7 @@ body {
     border: 3px solid hsl(198, 1%, 29%);
     border-radius: 8px;
     padding: 10px 15px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Architects Daughter", sans-serif;
     font-size: 0.9rem;
 }
 
