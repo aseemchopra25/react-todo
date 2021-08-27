@@ -13,15 +13,18 @@ body {
 }
 
 .to-do-list {
-    margin: 50px auto;
+    margin: 250px auto;
     padding: 16px;
-    min-height: 580px;
+    min-height: 480px;
     max-width: 300px;
     background-color: #f1f5f8;
     background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
     background-size: 40px 40px;
     border-radius: 20px;
     box-shadow: 4px 3px 7px 2px #00000040;
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+    
 }
 
 .heading {
@@ -72,7 +75,8 @@ body {
 .items ul li {
     text-align: left;   
     margin: 20px 10px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 300;
     color: #494a4b;
+    list-style: none;
 }
