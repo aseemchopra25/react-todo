@@ -16,7 +16,7 @@ body {
     margin: 50px auto;
     padding: 16px;
     min-height: 480px;
-    max-width: 300px;
+    max-width: 250px;
     background-color: #f1f5f8;
     background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
     background-size: 40px 40px;
@@ -60,6 +60,7 @@ body {
 }
 
 .to-do-list button {
+    /* position: relative; */
     margin-top: 30px;
     border: 3px solid hsl(198, 1%, 29%);
     border-radius: 8px;

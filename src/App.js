@@ -35,7 +35,7 @@ function App() {
                   value={input}
                   onChange={(event) => {setInput(event.target.value)}}
               />
-              <button onClick={addItem}>Add</button>
+              <span><button onClick={addItem}>Add</button></span>
 
           <div className="items">
             <ul>
@@ -49,7 +49,7 @@ function App() {
                 ))}
             </ul>
           </div>
-          <ParticlesBg type="square" bg={true} color="#494a4b"/>
+          <ParticlesBg type="thick" bg={true} color="#494a4b"/>
 
       </div>
       
